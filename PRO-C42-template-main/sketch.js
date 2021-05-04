@@ -28,8 +28,9 @@ function setup(){
     createCanvas(400,700);
     umbrella = new Umbrella(200,500);
     if(frameCount%150===0){
-        for(var i = 0; i < maxDrops; 1++)
+        for(var i = 0; i < maxDrops; i++)
         drops.push(new Drops(random(0,400), (random(0,400))))
+    
     }
    
     
@@ -76,8 +77,8 @@ function draw(){
 
     umbrella.display();
 
-for(var i = 0 ; i< maxDrops;1++){
-    driops[i].display();
+for(var i = 0 ; i< maxDrops;i++){
+    drops[i].display();
     drops[i].update();
 }
    
